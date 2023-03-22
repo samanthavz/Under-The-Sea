@@ -23,7 +23,9 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        float fly = Input.GetAxisRaw("Fly");
+
+        Vector3 direction = new Vector3(horizontal, fly, vertical).normalized;
 
         if (direction.magnitude >= 0.1f)
         {
@@ -32,7 +34,9 @@ public class ThirdPersonMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            // controller.Move(moveDir.normalized * speed * Time.deltaTime);
+
+            controller.Move(transform.TransformDirection(direction.normalized * speed * Time.deltaTime));
         }
     }
 }
