@@ -21,6 +21,10 @@ public class ThirdPersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.F)){
+            Debug.Log("AAAAAA");
+        }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         float fly = Input.GetAxisRaw("Fly");
