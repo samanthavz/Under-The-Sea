@@ -11,6 +11,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+    Vector3 moveDir; 
+    bool check = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,20 +29,41 @@ public class ThirdPersonMovement : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        float fly = Input.GetAxisRaw("Fly");
+        // float fly = Input.GetAxisRaw("Fly");
 
-        Vector3 direction = new Vector3(horizontal, fly, vertical).normalized;
+        Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
 
-        if (direction.magnitude >= 0.1f)
+        if (direction.magnitude >= 0.1f || check)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            // controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            if(Input.GetKey("space"))
+                moveDir.y+=1;    
+            if(Input.GetKey("left shift"))
+                moveDir.y-=1;
 
-            controller.Move(transform.TransformDirection(direction.normalized * speed * Time.deltaTime));
+            moveDir.y -= 0.01f;
+            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+
+            // controller.Move(transform.TransformDirection(direction.normalized * speed * Time.deltaTime));
         }
+
+        if(Input.GetKey("space") || Input.GetKey("left shift")) {
+            check = true;
+            Debug.Log("Down");
+        }
+                
+        if(Input.GetKeyUp("space") || Input.GetKeyUp("left shift")){
+            check = false; 
+            Debug.Log("Up"); 
+        }
+                   
+
+            // moveDir.y -= 0.01f;
+        
+        // controller.Move(moveDir.normalized * speed * Time.deltaTime);
     }
 }
