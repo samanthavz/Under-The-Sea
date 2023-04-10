@@ -17,8 +17,6 @@ public class NpcInteractable : MonoBehaviour, IInteractable
 
         //add optional animator.SetTrigger("bla");
 
-        //add optional lookat function
-        // transform.LookAt(player);
     }
 
     public string GetInteractText()
@@ -36,7 +34,6 @@ public class NpcInteractable : MonoBehaviour, IInteractable
         if(Vector3.Distance(player.position,transform.position) < 10f)
         {
             int speed = 5;
-            // transform.LookAt(player);
             var targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
      
             // Smoothly rotate towards the target point.
