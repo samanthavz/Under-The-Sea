@@ -23,9 +23,6 @@ public class ThirdPersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F)){
-            Debug.Log("AAAAAA");
-        }
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -53,12 +50,10 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if(Input.GetKey("space") || Input.GetKey("left shift")) {
             check = true;
-            Debug.Log("Down");
         }
                 
         if(Input.GetKeyUp("space") || Input.GetKeyUp("left shift")){
             check = false; 
-            Debug.Log("Up"); 
         }
                    
 
