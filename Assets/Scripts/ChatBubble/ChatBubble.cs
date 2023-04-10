@@ -37,5 +37,7 @@ public class ChatBubble : MonoBehaviour
         Vector3 offset = new Vector2(-2.6f, 0f);
         backgroundSpriteRenderer.transform.localPosition = 
             new Vector3(backgroundSpriteRenderer.size.x / 2f, 0f) + offset;
+
+        // TextWriter.AddWriter_Static(textMeshPro, text, .05f, true, true, () => { });
     }
 }

@@ -8,9 +8,12 @@ public class NpcInteractable : MonoBehaviour, IInteractable
 
     [SerializeField] private string interactText;
 
+    [TextArea(15,20)]
+    [SerializeField] private string text;
+
     public void Interact(Transform interactorTransform)
     {
-        ChatBubble.Create(transform.transform, new Vector3(-.3f, 1.7f, 0f), "Blub Blub!");
+        ChatBubble.Create(transform.transform, new Vector3(-2f, 1.7f, 0f), text);
 
         //add optional animator.SetTrigger("bla");
 
@@ -32,7 +35,12 @@ public class NpcInteractable : MonoBehaviour, IInteractable
     {
         if(Vector3.Distance(player.position,transform.position) < 10f)
         {
-        transform.LookAt(player);
+            int speed = 5;
+            // transform.LookAt(player);
+            var targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
+     
+            // Smoothly rotate towards the target point.
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
         }
     }
 }
