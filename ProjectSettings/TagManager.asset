@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Background
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: Top
     uniqueID: 417441429
+    locked: 0
+  - name: UI
+    uniqueID: 693061057
     locked: 0
