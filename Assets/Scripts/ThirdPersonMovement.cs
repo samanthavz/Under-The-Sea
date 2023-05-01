@@ -14,10 +14,21 @@ public class ThirdPersonMovement : MonoBehaviour
     Vector3 moveDir; 
     bool check = false;
 
+    //isgrounded
+    float distToGround;
+
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+        // get the distance to ground
+        distToGround = gameObject.GetComponent<Collider>().bounds.extents.y;
+    }
+
+    public bool IsGrounded() 
+    {
+        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.2f);
     }
 
     // Update is called once per frame
@@ -55,7 +66,13 @@ public class ThirdPersonMovement : MonoBehaviour
         if(Input.GetKeyUp("space") || Input.GetKeyUp("left shift")){
             check = false; 
         }
+
                    
+        if (IsGrounded() == false)
+        {
+            transform.Translate(Vector3.down * Time.deltaTime * 0.5f, Space.World);
+
+        }
 
             // moveDir.y -= 0.01f;
         
