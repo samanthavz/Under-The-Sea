@@ -12,6 +12,7 @@ public class SetActive : MonoBehaviour
 
     public void Active()
     {
+        Debug.Log("active");
         if (ActivateObject != null)
         {
             ActivateObject.SetActive(true);

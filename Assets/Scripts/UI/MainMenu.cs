@@ -5,13 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private const float V = 5f;
     [SerializeField]
     Animator animator;
-    
+
+    [SerializeField]
+    GameObject blackPanel;
+
+
     public void StartCutsceneOne()
     {
-        //Start animation
-        Debug.Log("Start Cutscene 1");
+        //Start fade out animation
+        Cursor.lockState = CursorLockMode.Locked;
         animator.SetBool("Play", true);
     }
         
@@ -26,4 +31,18 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Exit Game");
         Application.Quit();
     }
+
+    public void BlackScreen()
+    {
+        blackPanel.SetActive(true);
+
+        StartCoroutine(Timer());
+    }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(5);
+        NextLevel();
+    }
+
 }
