@@ -12,15 +12,22 @@ public class AnimationManager : MonoBehaviour
         cutsceneOne.GetComponent<CutsceneOne>().StartCutscene();
     }
 
+    public void CutsceneTwoStart()
+    {
+        GameObject cutsceneTwo = GameObject.Find("Cutscene2");
+        cutsceneTwo.GetComponent<CutsceneTwo>().StartCutscene();
+    }
+
     public void Blackout()
     {
         GameObject canvas = GameObject.Find("MainMenu");
         canvas.GetComponent<MainMenu>().BlackScreen();
     }
 
-    public void Test()
+    public void SpawnPlayer()
     {
-        Debug.Log("test");
-       
+        GameObject cutsceneTwo = GameObject.Find("Cutscene2");
+        cutsceneTwo.GetComponent<CutsceneTwo>().EnableCharacters();
+
     }
 }
