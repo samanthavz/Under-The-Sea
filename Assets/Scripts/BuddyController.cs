@@ -20,7 +20,7 @@ public class BuddyController : MonoBehaviour
 
         if((transform.position - player.position).magnitude > 2f)
         {
-            transform.Translate(0.0f, 0.0f, Time.deltaTime * 10.0f);
+            transform.Translate(0.0f, 0.0f, Time.deltaTime * 8.0f);
         }
     }
 
