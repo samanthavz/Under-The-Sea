@@ -20,14 +20,9 @@ public class BuddyController : MonoBehaviour
 
         if((transform.position - player.position).magnitude > 2f)
         {
-            transform.Translate(0.0f, 0.0f, Time.deltaTime * 3.0f);
+            transform.Translate(0.0f, 0.0f, Time.deltaTime * 10.0f);
         }
     }
 
-
-//     void LateUpdate () {
-//      transform.position = Vector3.Lerp(transform.position, player.position + offset, Time.deltaTime * 100);
-//      transform.rotation = Quaternion.Lerp(transform.rotation, player.rotation, Time.deltaTime * 100);
-//  }
 
 }
