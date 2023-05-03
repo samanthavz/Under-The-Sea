@@ -8,6 +8,8 @@ public class LoadSceneInteract : MonoBehaviour, IInteractable
 
     [SerializeField] private string interactText;
 
+    [SerializeField] Animator canvas;
+
     public string GetInteractText()
     {
         return interactText;
@@ -20,8 +22,15 @@ public class LoadSceneInteract : MonoBehaviour, IInteractable
 
     public void Interact(Transform interactorTransform)
     {
+        canvas.SetTrigger("FadeIn");
+        StartCoroutine(Timer());
+    }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-   
+
 }
