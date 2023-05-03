@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3728437067036764363}
   - component: {fileID: 3728437067036764360}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6904147508dde497ca9214587bccf17d, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7647059}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3728437067391506962}
   - component: {fileID: 3728437067391506966}
   - component: {fileID: 3728437067391506963}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BubbleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
-  m_fontSizeBase: 4
+  m_fontSize: 3.5
+  m_fontSizeBase: 3.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -267,7 +267,8 @@ GameObject:
   - component: {fileID: 3728437068038445425}
   - component: {fileID: 3728437068038445424}
   - component: {fileID: 1866171683612520564}
-  m_Layer: 0
+  - component: {fileID: 4032470359939566555}
+  m_Layer: 5
   m_Name: ChatBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,3 +325,14 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!210 &4032470359939566555
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3728437068038445427}
+  m_Enabled: 1
+  m_SortingLayerID: 693061057
+  m_SortingLayer: 2
+  m_SortingOrder: 10

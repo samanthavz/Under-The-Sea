@@ -13,7 +13,7 @@ public class NpcInteractable : MonoBehaviour, IInteractable
 
     public void Interact(Transform interactorTransform)
     {
-        ChatBubble.Create(transform.transform, new Vector3(-2f, 1.7f, 0f), text);
+        ChatBubble.Create(transform.transform, new Vector3(1.5f, 1.7f, 0f), text);
 
         //add optional animator.SetTrigger("bla");
 
