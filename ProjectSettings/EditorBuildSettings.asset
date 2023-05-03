@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PartOne.unity
     guid: 5573b1640cc3a444690c5d5cfb6f5287
+  - enabled: 1
+    path: Assets/Scenes/PartOneReef.unity
+    guid: 3e7f56260d61ea240b28bc66807913ad
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
