@@ -12,6 +12,8 @@ public class BabyFish : MonoBehaviour, IInteractable
 
     [SerializeField] GameObject momFish;
 
+    [SerializeField] Transform player;
+
 
     public string GetInteractText()
     {
@@ -28,10 +30,9 @@ public class BabyFish : MonoBehaviour, IInteractable
         babyFish.SetTrigger("Trigger");
 
         //switch out the subtitles for mom fish
-        momFish.GetComponent<NpcInteractable>();
-
+        momFish.GetComponent<NpcInteractable>().text = "Fish Mom: Thank you so much for finding my son!";
+        Destroy(this);
     }
-
 
 
 }

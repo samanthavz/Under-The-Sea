@@ -9,7 +9,7 @@ public class NpcInteractable : MonoBehaviour, IInteractable
     [SerializeField] private string interactText;
 
     [TextArea(15,20)]
-    [SerializeField] private string text;
+    public string text;
 
     public void Interact(Transform interactorTransform)
     {
