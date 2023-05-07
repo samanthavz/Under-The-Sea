@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 [System.Serializable]
 public struct SubtitleText
@@ -37,6 +38,17 @@ public class Subtitles : MonoBehaviour
         foreach (var voiceLine in subtitleText)
         {
             subtitles.text = voiceLine.text;
+            
+            if (subtitles.text != "")
+            {
+                GameObject subtitleArea = GameObject.Find("SubtitleArea");
+                subtitleArea.GetComponent<Image>().enabled = true;
+            } else
+            {
+                GameObject subtitleArea = GameObject.Find("SubtitleArea");
+                subtitleArea.GetComponent<Image>().enabled = false;
+            }
+
 
             yield return new WaitForSeconds(voiceLine.time);
         }

@@ -11458,7 +11458,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316747801}
-  m_LocalRotation: {x: 0.10649046, y: 0.0000000042771338, z: -4.580787e-10, w: 0.9943138}
+  m_LocalRotation: {x: 0.10649046, y: -0.0000000042771364, z: 4.5807902e-10, w: 0.9943138}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -72530,7 +72530,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -72750,6 +72750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4756219728291164220}
+  - component: {fileID: 4756219728291164223}
   m_Layer: 5
   m_Name: SubtitleArea
   m_TagString: Untagged
@@ -72757,6 +72758,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!222 &4756219728291164223
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4756219728291164221}
+  m_CullTransparentMesh: 1
 --- !u!1 &4756219728893533154
 GameObject:
   m_ObjectHideFlags: 0

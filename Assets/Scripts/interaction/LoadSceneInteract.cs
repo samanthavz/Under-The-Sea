@@ -22,6 +22,7 @@ public class LoadSceneInteract : MonoBehaviour, IInteractable
 
     public void Interact(Transform interactorTransform)
     {
+        GetComponent<BoxCollider>().enabled = false;
         canvas.SetTrigger("FadeIn");
         StartCoroutine(Timer());
     }
