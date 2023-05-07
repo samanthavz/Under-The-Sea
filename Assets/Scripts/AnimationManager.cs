@@ -30,4 +30,16 @@ public class AnimationManager : MonoBehaviour
         cutsceneTwo.GetComponent<CutsceneTwo>().EnableCharacters();
 
     }
+
+    public void TitleScreenAudioStart()
+    {
+        GameObject canvas = GameObject.Find("Canvas");
+        canvas.GetComponent<AudioSource>().Play();
+    }
+
+    public void TitleScreenAudioStop()
+    {
+        GameObject canvas = GameObject.Find("Canvas");
+        canvas.GetComponent<AudioSource>().Stop();
+    }
 }
