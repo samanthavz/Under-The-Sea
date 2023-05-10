@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CutsceneTwo : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class CutsceneTwo : MonoBehaviour
     Animator canvasAnimator;
 
     [SerializeField]
+    Animator cutsceneBalk;
+
+    [SerializeField]
     GameObject player;
 
     [SerializeField]
@@ -18,6 +22,10 @@ public class CutsceneTwo : MonoBehaviour
 
     [SerializeField]
     GameObject buddy;
+
+    [SerializeField]
+    CinemachineFreeLook FreeLook;
+
 
     // Start is called before the first frame update
     void Start()
@@ -46,10 +54,29 @@ public class CutsceneTwo : MonoBehaviour
         player.SetActive(true);
         playerCamera.SetActive(true);
         buddy.SetActive(true);
+        
+        //recenter camera behind player
+        //FreeLook.m_YAxisRecentering.RecenterNow();
+        FreeLook.m_RecenterToTargetHeading.RecenterNow();
+        //FreeLook.m_XAxis.Value = 0;
+        //FreeLook.m_YAxis.Value = 0.5f;
+
+        //FreeLook.m_YAxisRecentering.CancelRecentering();
+        
+
+        StartCoroutine(CutsceneBalk());
 
         GameObject buddyCutscene = GameObject.Find("BuddyCutscene");
         GameObject playerCutscene = GameObject.Find("FishV2");
         buddyCutscene.SetActive(false);
         playerCutscene.SetActive(false);
     }
+
+    IEnumerator CutsceneBalk()
+    {
+        yield return new WaitForSeconds(4);
+        cutsceneBalk.SetTrigger("Out");
+        FreeLook.m_RecenterToTargetHeading.m_WaitTime = 999999999999f;
+    }
+
 }
