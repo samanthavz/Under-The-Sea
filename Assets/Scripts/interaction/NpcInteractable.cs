@@ -13,6 +13,8 @@ public class NpcInteractable : MonoBehaviour, IInteractable
 
     public void Interact(Transform interactorTransform)
     {
+        GameObject fish = GameObject.Find("TropicalFish");
+        fish.GetComponent<AudioSource>().Play();
         ChatBubble.Create(transform.transform, new Vector3(1.5f, 1.7f, 0f), text);
 
         //add optional animator.SetTrigger("bla");

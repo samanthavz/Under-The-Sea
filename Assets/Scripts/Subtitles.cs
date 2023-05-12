@@ -22,13 +22,9 @@ public class Subtitles : MonoBehaviour
 
     public SubtitleText[] subtitleText;
 
-    //private void Start()
-    //{
-    //    StartSubtitles();
-    //}
-
     public void StartSubtitles()
     {
+
         StartCoroutine(SubtitleCoroutine());
     }
 
@@ -37,7 +33,9 @@ public class Subtitles : MonoBehaviour
         subtitleGO.SetActive(true);
         foreach (var voiceLine in subtitleText)
         {
+            subtitleGO.SetActive(true);
             subtitles.text = voiceLine.text;
+            subtitleGO.GetComponent<AudioSource>().Play();
             
             if (subtitles.text != "")
             {
