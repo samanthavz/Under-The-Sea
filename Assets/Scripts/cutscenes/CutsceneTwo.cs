@@ -55,15 +55,8 @@ public class CutsceneTwo : MonoBehaviour
         playerCamera.SetActive(true);
         buddy.SetActive(true);
         
-        //recenter camera behind player
-        //FreeLook.m_YAxisRecentering.RecenterNow();
         FreeLook.m_RecenterToTargetHeading.RecenterNow();
-        //FreeLook.m_XAxis.Value = 0;
-        //FreeLook.m_YAxis.Value = 0.5f;
-
-        //FreeLook.m_YAxisRecentering.CancelRecentering();
-        
-
+       
         StartCoroutine(CutsceneBalk());
 
         GameObject buddyCutscene = GameObject.Find("BuddyCutscene");
