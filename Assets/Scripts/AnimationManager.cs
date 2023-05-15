@@ -42,4 +42,18 @@ public class AnimationManager : MonoBehaviour
         GameObject canvas = GameObject.Find("Canvas");
         canvas.GetComponent<AudioSource>().Stop();
     }
+
+    //cutscene 3
+    public void BalkUp()
+    {
+        GameObject cutsceneThree = GameObject.Find("Cutscene3");
+        cutsceneThree.GetComponent<CutsceneThree>().CutsceneBalkUp();
+
+    }
+    public void StartSubCutThree()
+    {
+        GameObject buddy = GameObject.Find("Buddy");
+        buddy.GetComponent<Subtitles>().StartSubtitles();
+    }
+
 }

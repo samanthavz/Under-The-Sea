@@ -54,4 +54,8 @@ public class Subtitles : MonoBehaviour
         subtitleGO.SetActive(false);
     }
 
+    public void SubtitlesDestroy()
+    {
+        Destroy(this);
+    }
 }
