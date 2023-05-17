@@ -10,6 +10,15 @@ public class LoadSceneInteract : MonoBehaviour, IInteractable
 
     [SerializeField] Animator canvas;
 
+
+    //audio stuff
+
+    [SerializeField] AudioSource mainAudio;
+
+    [SerializeField] float duration = 3f;
+
+    [SerializeField] float targetVolume = 0f;
+
     public string GetInteractText()
     {
         return interactText;
@@ -24,6 +33,15 @@ public class LoadSceneInteract : MonoBehaviour, IInteractable
     {
         GetComponent<BoxCollider>().enabled = false;
         canvas.SetTrigger("FadeIn");
+
+        //fade out audio
+
+        if (mainAudio != null)
+        {
+            StartCoroutine(AudioFade.StartFade(mainAudio, duration, targetVolume));
+        }
+        
+
         StartCoroutine(Timer());
     }
 
