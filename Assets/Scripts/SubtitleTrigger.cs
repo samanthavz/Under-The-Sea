@@ -8,8 +8,12 @@ public class SubtitleTrigger : MonoBehaviour
     public UnityEvent FunctionToTrigger;
     void OnTriggerEnter(Collider other)
     {
-       FunctionToTrigger.Invoke();
-       gameObject.GetComponent<SetActive>().Active();
-       Destroy(this);
+        FunctionToTrigger.Invoke();
+        
+        if (gameObject.GetComponent<SetActive>() != null)
+        {
+            gameObject.GetComponent<SetActive>().Active();
+        }
+        Destroy(this);
     }
 }
