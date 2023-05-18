@@ -74,8 +74,21 @@ public class ThirdPersonMovement : MonoBehaviour
 
         }
 
-            // moveDir.y -= 0.01f;
-        
+        // moveDir.y -= 0.01f;
+
         // controller.Move(moveDir.normalized * speed * Time.deltaTime);
+    }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Enemy"))
+        {
+            float pushPower = 0.5f;
+            Vector3 pushDir = transform.position - hit.transform.position;
+            controller.Move(pushDir * pushPower);
+
+            GameObject net = GameObject.Find("nets");
+            net.GetComponent<Subtitles>().StartSubtitles();
+        }
     }
 }
