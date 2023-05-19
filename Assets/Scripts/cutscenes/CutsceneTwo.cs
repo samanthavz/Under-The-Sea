@@ -70,6 +70,9 @@ public class CutsceneTwo : MonoBehaviour
         yield return new WaitForSeconds(4);
         cutsceneBalk.SetTrigger("Out");
         FreeLook.m_RecenterToTargetHeading.m_WaitTime = 999999999999f;
+
+        GameObject obj = GameObject.Find("Objective");
+        obj.GetComponent<Objective>().SetObjective("OBJECTIVE: Find an exit");
     }
 
 }

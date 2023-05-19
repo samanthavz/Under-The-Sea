@@ -82,6 +82,9 @@ public class CutsceneThree : MonoBehaviour
 
         GameObject canvas = GameObject.Find("Canvas");
         canvas.GetComponent<Animator>().SetTrigger("FadeOut3");
+
+        GameObject obj = GameObject.Find("Objective");
+        obj.GetComponent<Objective>().SetObjective("OBJECTIVE: Look around or find the way to the Open Sea");
     }
 
     public void CutsceneBalkUp()
