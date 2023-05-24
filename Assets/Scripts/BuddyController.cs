@@ -6,6 +6,7 @@ public class BuddyController : MonoBehaviour
 {
     private Transform player;
     private Vector3 offset;
+    private float speed = 8.0f;
    
     void Start()
     {
@@ -20,8 +21,13 @@ public class BuddyController : MonoBehaviour
 
         if((transform.position - player.position).magnitude > 2f)
         {
-            transform.Translate(0.0f, 0.0f, Time.deltaTime * 8.0f);
+            transform.Translate(0.0f, 0.0f, Time.deltaTime * speed);
         }
+    }
+
+    public void Buddyspeed()
+    {
+        speed = 1.0f;
     }
 
 

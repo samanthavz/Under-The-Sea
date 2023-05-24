@@ -50,7 +50,11 @@ public class LoadSceneBool : MonoBehaviour, IInteractable
         }
         else
         {
-            GetComponent<Subtitles>().StartSubtitles();
+            if (GetComponent<Subtitles>() != null)
+            {
+                GetComponent<Subtitles>().StartSubtitles();
+            }
+            
         }
         
     }
