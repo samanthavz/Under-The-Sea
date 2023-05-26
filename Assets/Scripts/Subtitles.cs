@@ -35,10 +35,10 @@ public class Subtitles : MonoBehaviour
         {
             subtitleGO.SetActive(true);
             subtitles.text = voiceLine.text;
-            subtitleGO.GetComponent<AudioSource>().Play();
             
             if (subtitles.text != "")
             {
+                subtitleGO.GetComponent<AudioSource>().Play();
                 GameObject subtitleArea = GameObject.Find("SubtitleArea");
                 subtitleArea.GetComponent<Image>().enabled = true;
             } else

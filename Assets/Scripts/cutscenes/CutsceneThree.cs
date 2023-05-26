@@ -68,7 +68,7 @@ public class CutsceneThree : MonoBehaviour
 
     IEnumerator ExitAnimation()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         player.SetActive(true);
         playerCamera.SetActive(true);
