@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1137157315}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589245, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276797, g: 0.21589167, b: 0.29782546, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15428,7 +15428,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh826948
+  m_Name: pb_Mesh158484
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15995,7 +15995,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.9568186, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.6024932, b: 0, a: 1}
   m_Intensity: 200
   m_Range: 1000
   m_SpotAngle: 30
@@ -16054,7 +16054,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454610789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 53.96, y: 5.36, z: 72.98}
+  m_LocalPosition: {x: 51.78, y: 5.36, z: 72.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71555,7 +71555,7 @@ MonoBehaviour:
   - time: 6
     text: 'Fish: You see... I''m actually lost.'
   - time: 10
-    text: 'Fish: Maybe we can help eachother find our way back?'
+    text: 'Fish: Maybe we can help eachother find our way back home?'
   - time: 7
     text: 
   - time: 10
