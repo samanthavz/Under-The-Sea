@@ -25,6 +25,9 @@ public class CutsceneThree : MonoBehaviour
         GameObject canvas = GameObject.Find("Canvas");
         canvas.GetComponent<Animator>().SetTrigger("FadeIn");
 
+        GameObject collider = GameObject.Find("CutsceneBarrier");
+        collider.GetComponent<BoxCollider>().enabled = false;
+
         StartCoroutine(CutsceneThreeStart());
     }
 
