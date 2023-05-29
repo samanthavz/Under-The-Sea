@@ -29,8 +29,18 @@ public class BabyFish : MonoBehaviour, IInteractable
     {
         babyFish.SetTrigger("Trigger");
 
+        GameObject obj = GameObject.Find("Objective");
+        obj.GetComponent<Objective>().SetObjective("OBJECTIVE: Look around or find the cave");
+
+        GameObject exit = GameObject.Find("NextLevelArea");
+        exit.GetComponent<LoadSceneBool>().Open();
+
+        GameObject buddy = GameObject.Find("Buddy");
+        buddy.GetComponent<Subtitles>().StartSubtitles();
+
+
         //switch out the subtitles for mom fish
-        momFish.GetComponent<NpcInteractable>().text = "Fish Mom: Thank you so much for finding my son!";
+        momFish.GetComponent<FishMom>().text = "Fish Mom: Thank you so much for finding my son!";
         Destroy(this);
     }
 
