@@ -29,6 +29,11 @@ public class BuddyController : MonoBehaviour
     {
         speed = 1.0f;
     }
+    public void Buddyspeed2()
+    {
+        speed = 2.0f;
+    }
+
 
 
 }

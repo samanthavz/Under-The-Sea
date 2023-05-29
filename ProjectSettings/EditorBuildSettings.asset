@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PartFour.unity
     guid: a7f31fe5152a9e3449af7e88d908fcb6
+  - enabled: 1
+    path: Assets/Scenes/Cutscene5.unity
+    guid: 74a2d0138b9818d4fb648e4b1cec45a7
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

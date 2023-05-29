@@ -21,18 +21,35 @@ public class OilFish : MonoBehaviour, IInteractable
 
     public void Interact(Transform interactorTransform)
     {
-        GetComponent<SetActive>().Active();
-        GetComponent<SetActive>().Disable();
 
-        //turn off toxic spill
-        GameObject toxicx = GameObject.Find("toxicspill");
-        toxicx.SetActive(false);
+        //turn off collider
+        GetComponent<SphereCollider>().enabled = false;
 
         GetComponent<Subtitles>().StartSubtitles();
 
-        //Start new script
-        GameObject buddy = GameObject.Find("Buddy");
-        buddy.GetComponent<BuddyToxic>().Toxic();
+        GameObject obj = GameObject.Find("Objective");
+        obj.GetComponent<Objective>().SetObjective("OBJECTIVE: Listen to Big Fish");
+
+        StartCoroutine(Timer());
+    }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(54f);
+
+        GameObject obj = GameObject.Find("Objective");
+        obj.GetComponent<Objective>().SetObjective("OBJECTIVE: Look around the area");
+
+        StartCoroutine(Timer2());
+    }
+
+    IEnumerator Timer2()
+    {
+        yield return new WaitForSeconds(50f);
+
+        //startcutscene5
+        GameObject cs5 = GameObject.Find("Cutscene5");
+        cs5.GetComponent<CutsceneFive>().StartCutscene();
 
         Destroy(this);
     }
