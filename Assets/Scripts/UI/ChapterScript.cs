@@ -29,7 +29,7 @@ public class ChapterScript : MonoBehaviour
 
     public void DisableText()
     {
-        chapterText.SetActive(false);
+       chapterText.SetActive(false);
     }
 
 }

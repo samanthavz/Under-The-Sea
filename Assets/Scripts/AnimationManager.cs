@@ -56,4 +56,17 @@ public class AnimationManager : MonoBehaviour
         buddy.GetComponent<Subtitles>().StartSubtitles();
     }
 
+    public void Cutscene5end1()
+    {
+        GameObject canvas = GameObject.Find("Canvas");
+        canvas.GetComponent<Animator>().SetTrigger("FadeIn");
+    }
+    public void Cutscene5end2()
+    {
+        GameObject chapterText = GameObject.Find("ChapterText");
+        chapterText.GetComponent<ChapterScript>().enabled = true;
+    }
+
+
+
 }
