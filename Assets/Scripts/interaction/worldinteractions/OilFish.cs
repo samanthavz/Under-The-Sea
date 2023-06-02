@@ -45,7 +45,7 @@ public class OilFish : MonoBehaviour, IInteractable
 
     IEnumerator Timer2()
     {
-        yield return new WaitForSeconds(50f);
+        yield return new WaitForSeconds(40f);
 
         //startcutscene5
         GameObject cs5 = GameObject.Find("Cutscene5");
