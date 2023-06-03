@@ -9,6 +9,9 @@ public class CutsceneTwo : MonoBehaviour
     Animator cutsceneTwo;
 
     [SerializeField]
+    Animator tutorial;
+
+    [SerializeField]
     Animator canvasAnimator;
 
     [SerializeField]
@@ -73,6 +76,15 @@ public class CutsceneTwo : MonoBehaviour
 
         GameObject obj = GameObject.Find("Objective");
         obj.GetComponent<Objective>().SetObjective("OBJECTIVE: Find an exit");
+
+        StartCoroutine(Tutorial());
+    }
+
+    IEnumerator Tutorial()
+    {
+        yield return new WaitForSeconds(25f);
+        tutorial.SetTrigger("Trigger");
+
     }
 
 }
