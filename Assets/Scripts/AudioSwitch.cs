@@ -29,6 +29,7 @@ public class AudioSwitch : MonoBehaviour
 
         track01.clip = defaultAmbience;
         track01.Play();
+        track01.loop = true;
     }
 
     public void SwapTrack(AudioClip newClip)

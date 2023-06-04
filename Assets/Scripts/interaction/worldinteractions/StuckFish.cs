@@ -27,9 +27,15 @@ public class StuckFish : MonoBehaviour, IInteractable
     {
         animator.SetTrigger("Trigger");
 
+        //remove questmark
+        GameObject mark = GameObject.Find("questMark1");
+        mark.SetActive(false);
+
         //activate subtitles
         GetComponent<NpcInteractable>().enabled = true;
+
         Destroy(this);
+
     }
 
     void Update()

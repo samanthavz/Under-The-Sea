@@ -1181,7 +1181,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62194063}
-  m_LocalRotation: {x: 0.09675139, y: -0.62454146, z: 0.078372315, w: 0.77100253}
+  m_LocalRotation: {x: 0.0967514, y: -0.62454146, z: 0.07837232, w: 0.77100253}
   m_LocalPosition: {x: -14.650408, y: -15.98, z: 26.450605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5581,7 +5581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 370283757}
   m_Layer: 0
-  m_Name: questMark
+  m_Name: questMark1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16969,7 +16969,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222497094}
-  m_LocalRotation: {x: 0.105518065, y: 0.13406539, z: -0.014358339, w: 0.9852341}
+  m_LocalRotation: {x: 0.10551806, y: 0.13406539, z: -0.014358327, w: 0.98523414}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -21171,7 +21171,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601208599}
-  m_LocalRotation: {x: 0.12337427, y: 0.13378292, z: -0.016788121, w: 0.98315775}
+  m_LocalRotation: {x: 0.123374276, y: 0.13378292, z: -0.016788118, w: 0.98315775}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

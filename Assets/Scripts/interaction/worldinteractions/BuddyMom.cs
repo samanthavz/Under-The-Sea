@@ -32,6 +32,10 @@ public class BuddyMom : MonoBehaviour, IInteractable
         GameObject exit = GameObject.Find("NextLevelArea");
         exit.GetComponent<LoadSceneBool>().Open();
 
+        //remove questmark
+        GameObject mark = GameObject.Find("questMark");
+        mark.SetActive(false);
+
         StartCoroutine(Wait());
     }
 

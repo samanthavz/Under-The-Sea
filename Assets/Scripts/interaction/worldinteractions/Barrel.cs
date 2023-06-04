@@ -34,6 +34,10 @@ public class Barrel : MonoBehaviour, IInteractable
         GameObject buddy = GameObject.Find("Buddy");
         buddy.GetComponent<BuddyToxic>().Toxic();
 
+        //remove questmark
+        GameObject mark = GameObject.Find("questMark");
+        mark.SetActive(false);
+
         Destroy(this);
     }
 

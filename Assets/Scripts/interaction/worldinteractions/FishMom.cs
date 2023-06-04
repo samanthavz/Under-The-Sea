@@ -22,7 +22,11 @@ public class FishMom : MonoBehaviour, IInteractable
             GameObject obj = GameObject.Find("Objective");
             obj.GetComponent<Objective>().SetObjective("OBJECTIVE: Look for the baby fish");
         }
-        
+
+        //remove questmark
+        GameObject mark = GameObject.Find("questMark");
+        mark.SetActive(false);
+
 
     }
 

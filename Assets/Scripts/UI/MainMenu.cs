@@ -12,6 +12,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     GameObject blackPanel;
 
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
 
     public void StartCutsceneOne()
     {
