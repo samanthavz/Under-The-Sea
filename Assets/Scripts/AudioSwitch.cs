@@ -44,6 +44,11 @@ public class AudioSwitch : MonoBehaviour
         SwapTrack(newTrack);
     }
 
+    public void TriggerSwap2()
+    {
+        SwapTrack(defaultAmbience);
+    }
+
     private IEnumerator FadeTrack(AudioClip newClip)
     {
         float timeToFade = 5f;

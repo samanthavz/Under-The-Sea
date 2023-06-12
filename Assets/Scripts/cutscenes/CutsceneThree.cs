@@ -28,6 +28,9 @@ public class CutsceneThree : MonoBehaviour
         GameObject collider = GameObject.Find("CutsceneBarrier");
         collider.GetComponent<BoxCollider>().enabled = false;
 
+        //sound switch
+        GetComponent<AudioSwitch>().TriggerSwap();
+
         StartCoroutine(CutsceneThreeStart());
     }
 
@@ -94,5 +97,13 @@ public class CutsceneThree : MonoBehaviour
     {
         GameObject balk = GameObject.Find("CutsceneBalk");
         balk.GetComponent<Animator>().SetTrigger("Out");
+
+        //audioswitch
+        GetComponent<AudioSwitch>().TriggerSwap2();
+    }
+
+    public void PlasticSound()
+    {
+        GetComponent<AudioSource>().Play();
     }
 }
